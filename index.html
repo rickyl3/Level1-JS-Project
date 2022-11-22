@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #vault {
+            border: 1px solid black;
+            width: 200px;
+            display: grid;
+        }
+        #playerGuess {
+            margin: auto auto;
+        }
+        #buttons {
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body onload="initialize()">
+    <h1>Level 1 JS - Codebreaker</h1>
+
+    <h2 id="clock">Guesses left: 7</h2>
+    <div id="vault">
+        <h3 id="playerGuess">---</h3>
+        <div id="buttons">
+            <button id="one" onclick="guess1()">1</button>
+            <button id="two" onclick="guess2()">2</button>
+            <button id="three" onclick="guess3()">3</button>
+        </div>
+        <button id="clearGuess" onclick="clearAll()">Clear</button>
+    </div>
+    <p id="log">
+        
+    </p>
+
+    <script src='script.js'></script>
+</body>
+</html>
