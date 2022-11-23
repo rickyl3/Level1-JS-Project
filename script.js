@@ -1,3 +1,10 @@
+/*
+    Ricky Leung
+    Web Development
+    Period 7/8 Odd
+    Level 1 Codebreaker
+*/
+
 var playerGuessNum = "";
 var correctGuess = "";
 var guessesLeft = 7;
@@ -40,12 +47,12 @@ function testGuess() {
     guessesLeft--;
     if (playerGuessNum === correctGuess) {
         playerLog.innerHTML += playerGuessNum + correct;
-        playerGuesses = 7;
+        guessesLeft = 7;
         generateNumber();
     } else if (parseInt(playerGuessNum) > parseInt(correctGuess)) {
         if (guessesLeft < 1) {
             playerLog.innerHTML += playerGuessNum + gameOver + correctGuess;
-            playerGuesses = 7;
+            guessesLeft = 7;
             generateNumber();
         } else {
             playerLog.innerHTML += playerGuessNum + lower;
@@ -53,7 +60,7 @@ function testGuess() {
     } else {
         if (guessesLeft < 1) {
             playerLog.innerHTML += playerGuessNum + gameOver + correctGuess;
-            playerGuesses = 7;
+            guessesLeft = 7;
             generateNumber();
         } else {
             playerLog.innerHTML += playerGuessNum + higher;
